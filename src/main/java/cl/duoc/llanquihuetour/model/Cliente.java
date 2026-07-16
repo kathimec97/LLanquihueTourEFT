@@ -71,7 +71,7 @@ if(this.apellido == null || this.apellido.trim().isEmpty()) {
     @Override
     public String mostrarDatos() {
         return "RUT: " + getRut() + " | Nombre: " + getNombre() + " | Apellido: " + this.apellido +
-                " | Teléfono: " + getTelefono() + "| Correo: " + getCorreo() + " | Dirección: " + getDireccion() +
+                " | Teléfono: " + getTelefono() + " | Correo: " + getCorreo() + " | Dirección: " + getDireccion() +
                 " | Tours Reservados: " + this.toursReservados.size();
 
     }

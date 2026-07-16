@@ -90,7 +90,7 @@ public class Tour implements Registrable{
     @Override
     public String mostrarDatos() {
         String nombreGuia = (guiaAsignado != null) ? guiaAsignado.getNombre() + " " + guiaAsignado.getApellido() : "sin guia asignado";
-        return "(ID:"  + this.idTour + ")" + "Tour: " + this.nombre + "| " + "Precio: $" + this.precio + "| " + "Guia: " + nombreGuia ;
+        return "(ID:"  + this.idTour + ")" + " | Tour: " + this.nombre + " | " + "Precio: $" + this.precio + " | " + "Guia: " + nombreGuia ;
      }
 
     /**

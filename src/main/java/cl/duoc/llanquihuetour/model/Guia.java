@@ -72,7 +72,8 @@ public class Guia extends Contacto{
      */
     @Override
     public String mostrarDatos() {
-        return super.mostrarDatos() + " | Apellido: " + this.apellido + " | Idiomas: " + this.idiomas;
+        return "RUT: " + getRut() + " | Nombre: " + getNombre() + " | Apellido: " + this.apellido +
+                " | Teléfono: " + getTelefono() + " | Correo: " + getCorreo() + " | Dirección: " + getDireccion()  + " | Idiomas: " + this.idiomas;
     }
 
     /**
