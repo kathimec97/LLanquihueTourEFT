@@ -15,12 +15,17 @@ public class Tour implements Registrable{
     private String nombre;
     private int precio;
     private Guia guiaAsignado;
+    private OperadorDeTransporte transporteAsignado;
+    private Proveedor proveedorAsignado;
 
-    public Tour(String idTour, String nombre, int precio, Guia guiaAsignado) {
+    public Tour(String idTour, String nombre, int precio, Guia guiaAsignado, OperadorDeTransporte transporteAsignado, Proveedor proveedorAsignado) {
         this.idTour = idTour;
         this.nombre = nombre;
         this.precio = precio;
         this.guiaAsignado = guiaAsignado;
+        this.transporteAsignado = transporteAsignado;
+        this.proveedorAsignado = proveedorAsignado;
+
     }
 
 
@@ -85,12 +90,16 @@ public class Tour implements Registrable{
     }
 
     /**
-     * Verifica que haya un guía asignado al tour y muestra su nombre, apellido junto con los demás datos del tour.
+     * Revisa si hay un guía, un transporte y un proveedor asignado al tour,
+     * dejando un aviso en el caso de que no tengan alguno asignado.
+     * Da formato y presenta toda la información de los tours.
      */
     @Override
     public String mostrarDatos() {
         String nombreGuia = (guiaAsignado != null) ? guiaAsignado.getNombre() + " " + guiaAsignado.getApellido() : "sin guia asignado";
-        return "(ID:"  + this.idTour + ")" + " | Tour: " + this.nombre + " | " + "Precio: $" + this.precio + " | " + "Guia: " + nombreGuia ;
+        String nombreTransporte = (transporteAsignado != null) ? transporteAsignado.getNombre() : "No aplica";
+        String nombreProveedor = (proveedorAsignado !=null) ? proveedorAsignado.getNombre(): "No aplica";
+        return "(ID:"  + this.idTour + ")" + " | Tour: " + this.nombre + " | " + "Precio: $" + this.precio + " | " + "Guia: " + nombreGuia + " | " + "Transporte: " + nombreTransporte + " | " + "Proveedor: " + nombreProveedor;
      }
 
     /**
