@@ -12,7 +12,7 @@ import cl.duoc.llanquihuetour.util.TelefonoInvalidException;
  */
 public interface Registrable {
     //se encarga de verificar rut, correo, y teléfono al momento del registro
-    void registrar() throws RutInvalidException, CorreoInvalidException, TelefonoInvalidException, DireccionInvalidaException;
+    void registrar() throws RutInvalidException, CorreoInvalidException, TelefonoInvalidException, DireccionInvalidaException, IllegalArgumentException;
 
     //Devuelve el texto ordenado para la opción de consultar detalles de los tours
     String mostrarDatos();

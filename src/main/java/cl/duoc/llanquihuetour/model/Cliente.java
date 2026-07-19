@@ -35,6 +35,10 @@ public class Cliente extends Contacto {
         this.apellido = apellido;
     }
 
+    public ArrayList<Tour> getToursReservados() {
+        return toursReservados;
+    }
+
     public void agregarTour(Tour tour) {
         if(tour != null) {
             this.toursReservados.add(tour);
@@ -45,7 +49,8 @@ public class Cliente extends Contacto {
     public String toString() {
         return super.toString() + "\n" +
                 "  Apellido: " + apellido + "\n" +
-                toursReservados.size();
+                "Tours Reservados" + toursReservados;
+
 
     }
 
@@ -57,7 +62,7 @@ public class Cliente extends Contacto {
      * @throws TelefonoInvalidException
      */
     @Override
-    public void registrar() throws RutInvalidException, CorreoInvalidException, TelefonoInvalidException, DireccionInvalidaException {
+    public void registrar() throws RutInvalidException, CorreoInvalidException, TelefonoInvalidException, DireccionInvalidaException, IllegalArgumentException {
 super.registrar();
 if(this.apellido == null || this.apellido.trim().isEmpty()) {
     throw new IllegalArgumentException("El apellido del cliente no puede estar vacío");
@@ -71,10 +76,11 @@ if(this.apellido == null || this.apellido.trim().isEmpty()) {
     @Override
     public String mostrarDatos() {
         return "RUT: " + getRut() + " | Nombre: " + getNombre() + " | Apellido: " + this.apellido +
-                " | Teléfono: " + getTelefono() + " | Correo: " + getCorreo() + " | Dirección: " + getDireccion() +
-                " | Tours Reservados: " + this.toursReservados.size();
+                " | Teléfono: " + getTelefono() + " | Correo: " + getCorreo() + " | Dirección: " + getDireccion() + this.toursReservados.size();
 
-    }
+        }
+
+
 
     /**
      *Convierte los datos del objeto a una línea de texto plano para guardarlo en el archivo.
@@ -82,6 +88,6 @@ if(this.apellido == null || this.apellido.trim().isEmpty()) {
      */
     @Override
     public String cambiarATextoPlano() {
-        return getRut() + "," + getNombre() + "," + this.apellido + "," + getTelefono() + "," + getCorreo() + "," + getDireccion() ;
-    }
+        return getRut() + "," + getNombre() + "," + this.apellido + "," + getTelefono() + "," + getCorreo() + "," + getDireccion();}
+
 }

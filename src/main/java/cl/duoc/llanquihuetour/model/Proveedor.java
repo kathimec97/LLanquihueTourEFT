@@ -10,25 +10,26 @@ import cl.duoc.llanquihuetour.util.TelefonoInvalidException;
  * @author Katherine Avila
  */
 public class Proveedor extends Contacto implements Registrable {
-     private String tipoDeservicio;
+     private String tipoDeServicio;
 
 
-     public Proveedor(String rut, String nombre, String telefono, String correo, String direccion) {
+     public Proveedor(String rut, String nombre, String telefono, String correo, String direccion,String tipoDeServicio ) {
           super(rut, nombre, telefono, correo, direccion);
+          this.tipoDeServicio = tipoDeServicio;
      }
 
      public String getTipoDeservicio() {
-          return tipoDeservicio;
+          return tipoDeServicio;
      }
 
-     public void setTipoDeservicio(String tipoDeservicio) {
-          this.tipoDeservicio = tipoDeservicio;
+     public void setTipoDeservicio(String tipoDeServicio) {
+     this.tipoDeServicio = tipoDeServicio;
      }
 
      @Override
      public String toString() {
           return "Proveedor{" +
-                  "tipoDeservicio='" + tipoDeservicio + '\'' +
+                  "tipoDeservicio='" + tipoDeServicio + '\'' +
                   '}';
      }
 
@@ -43,7 +44,7 @@ public class Proveedor extends Contacto implements Registrable {
      @Override
      public void registrar() throws RutInvalidException, CorreoInvalidException, TelefonoInvalidException, DireccionInvalidaException {
      super.registrar();
-     if(this.tipoDeservicio == null || this.tipoDeservicio.trim().isEmpty()) {
+     if(this.tipoDeServicio == null || this.tipoDeServicio.trim().isEmpty()) {
           throw new IllegalArgumentException("El campo Tipo de servicio no puede estar vacío");
      }
      }
@@ -56,7 +57,7 @@ public class Proveedor extends Contacto implements Registrable {
      public String mostrarDatos() {
 
           return   "RUT: " + getRut() + " | Nombre: " + getNombre()  +
-                  " | Teléfono: " + getTelefono() + " | Correo: " + getCorreo() + " | Dirección: " + getDireccion() + " | Tipo de servicio: " + this.tipoDeservicio;
+                  " | Teléfono: " + getTelefono() + " | Correo: " + getCorreo() + " | Dirección: " + getDireccion() + " | Tipo de servicio: " + this.tipoDeServicio;
      }
 
      /**
@@ -65,6 +66,6 @@ public class Proveedor extends Contacto implements Registrable {
       */
      @Override
      public String cambiarATextoPlano() {
-          return getRut() + "," + getNombre() + "," + getTelefono() + "," + getCorreo() + "," + getDireccion() + "," + this.tipoDeservicio;
+          return getRut() + "," + getNombre() + "," + getTelefono() + "," + getCorreo() + "," + getDireccion() + "," + this.tipoDeServicio;
      }
 }

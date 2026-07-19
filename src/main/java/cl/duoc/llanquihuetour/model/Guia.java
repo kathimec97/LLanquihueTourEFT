@@ -54,7 +54,7 @@ public class Guia extends Contacto{
      * @throws DireccionInvalidaException
      */
     @Override
-    public  void registrar() throws RutInvalidException, CorreoInvalidException, TelefonoInvalidException, DireccionInvalidaException {
+    public  void registrar() throws RutInvalidException, CorreoInvalidException, TelefonoInvalidException, DireccionInvalidaException, IllegalArgumentException {
         super.registrar();
 
         if(this.apellido == null || this.apellido.trim().isEmpty()) {
@@ -65,8 +65,8 @@ public class Guia extends Contacto{
             }
         }
 
-    /**
-     * /**
+
+     /**
      * Da formato y presenta la información del guía
      * @return Datos heredados de contacto, el apellido del guía y los idiomas que posee.
      */

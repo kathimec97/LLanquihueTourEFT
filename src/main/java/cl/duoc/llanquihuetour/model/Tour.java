@@ -61,6 +61,21 @@ public class Tour implements Registrable{
         this.guiaAsignado = guiaAsignado;
     }
 
+    public OperadorDeTransporte getTransporteAsignado() {
+        return transporteAsignado;
+    }
+
+    public void setTransporteAsignado(OperadorDeTransporte transporteAsignado) {
+        this.transporteAsignado = transporteAsignado;
+    }
+
+    public Proveedor getProveedorAsignado() {
+        return proveedorAsignado;
+    }
+
+    public void setProveedorAsignado(Proveedor proveedorAsignado) {
+        this.proveedorAsignado = proveedorAsignado;
+    }
 
     @Override
     public String toString() {
@@ -68,7 +83,9 @@ public class Tour implements Registrable{
                 "ID: " + idTour + "|" +
                 "Nombre: " + nombre + "|" +
                 "Precio: " + precio + "|" +
-                "Guia Asignado: " + guiaAsignado;
+                "Guia Asignado: " + guiaAsignado +
+                "Transporte Asignado: " + transporteAsignado +
+                "Proveedor Asignado: " + proveedorAsignado;
     }
 
     /**
@@ -109,7 +126,8 @@ public class Tour implements Registrable{
     @Override
     public String cambiarATextoPlano() {
         String rutGuia = (this.guiaAsignado != null) ? this.guiaAsignado.getRut() : "S/G";
-
-        return this.idTour + "," + this.nombre + "," + this.precio + "," + rutGuia;
+        String nombreTransporte = (this.transporteAsignado != null) ? this.transporteAsignado.getNombre() : "S/T";
+        String nombreProveedor = (this.proveedorAsignado != null) ? this.proveedorAsignado.getNombre() : "S/P";
+        return this.idTour + "," + this.nombre + "," + this.precio + "," + rutGuia + "," + nombreTransporte + "," + nombreProveedor;
     }
 }

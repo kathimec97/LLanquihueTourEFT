@@ -89,7 +89,7 @@ public class Contacto implements Registrable{
      */
 
     @Override
-    public void registrar() throws RutInvalidException, CorreoInvalidException, TelefonoInvalidException, DireccionInvalidaException {
+    public void registrar() throws RutInvalidException, CorreoInvalidException, TelefonoInvalidException, DireccionInvalidaException, IllegalArgumentException {
 
 
         if(!getRut().matches("[0-9]+-[0-9kK]")) {
