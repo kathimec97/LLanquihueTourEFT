@@ -1,0 +1,5 @@
+T01,Vuelta Al Lago,25000,44444444-4,Buses Sur,S/P
+T02,Volcan Osorno,30000,55555555-5,Turismo Lagos,S/P
+T03,City Tour Express,15000,66666666-6,S/T,S/P
+T04,Ruta Gastronomica,45000,S/G,S/T,Cafeteria Paso
+T05,Trekking Saltos,20000,88888888-8,Ruta Austral,S/P

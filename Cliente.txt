@@ -1,0 +1,5 @@
+11111111-1,Juan,Perez,911111111,juan@gmail.com,Av LosVolcanes 123 Llanquihue
+22222222-2,Maria,Gomez,922222222,maria@gmail.com,CostaneraSur 456 Puerto Varas
+33333333-3,Pedro,Diaz,933333333,pedro@gmail.com,Arturo Prat 789 Frutillar
+12345678-9,Ana,Rios,944444444,ana@gmail.com,Pasaje Las Rosas 321 Ensenada
+98765432-1,Luis,Vega,955555555,luis@gmail.com,Avenida Central 654 Puerto Montt

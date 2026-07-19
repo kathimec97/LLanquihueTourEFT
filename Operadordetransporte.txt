@@ -1,0 +1,5 @@
+76111111-1,Buses Sur,966666666,contacto@busessur.cl,Ruta Cinco Sur 1000 Puerto Montt,Bus,40
+76222222-2,Turismo Lagos,977777777,info@turismolagos.cl,Costanera 200 Puerto Varas,Minibus,15
+76333333-3,Transportes Andinos,912345678,reservas@andinos.cl,Avenida Brasil 100 Frutillar,Furgon,10
+76444444-4,Ruta Austral,987654321,ventas@rutaaustral.cl,Calle Ohlsson 500 Llanquihue,Van,8
+76555555-5,Viajes Express,999888777,contacto@viajesexpress.cl,Pasaje Centro 50 Ensenada,Minibus,20

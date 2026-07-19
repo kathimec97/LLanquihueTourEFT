@@ -1,0 +1,5 @@
+77111111-1,Hotel Volcan,988888888,reservas@hotelvolcan.cl,Camino Ensenada 300 PuertoVaras,alojamiento
+77222222-2,Restaurante Lago,999999999,contacto@restolago.cl,Playa Llanquihue 400 Llanquihue,restaurante
+77333333-3,Cabañas Del Sur,955443322,info@cabanassur.cl,Ruta Costera 150 Frutillar,alojamiento
+77444444-4,Cafeteria Paso,922334455,ventas@cafepaso.cl,Centro 200 Puerto Montt,restaurante
+77555555-5,Termas Andinas,911223344,contacto@termas.cl,Camino Montana 800 Ensenada,actividad
